@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class Mastermind {
     public static void main(String[] args) throws Exception {
         int[] genArray = new int[4];
         int[] userArray = new int[4];
