@@ -47,5 +47,6 @@ public class Mastermind {
                 }
             }
         }
+        userInput.close();
     }
 }
