@@ -2,32 +2,15 @@ import java.util.Scanner;
 
 public class Mastermind {
     public static void main(String[] args) throws Exception {
-        int[] genArray = new int[4];
+        int[] genArray = ArrayGen.genArrary();
         int[] userArray = new int[4];
         int tempUserValue;
         int hits = 0;
         int blows = 0;
-        boolean isTaken = false;
         boolean hasWon = false;
         Scanner userInput = new Scanner(System.in);
 
         int round = 0;
-        for(int i = 0; i < 4;){
-            int tempNum = (int)(Math.random() * 7);
-            for(int j = 0; j < 4; j++){
-                if(genArray[j] == tempNum)
-                {
-                    isTaken = true;
-                }
-            }
-            if(isTaken == false){
-                genArray[i] = tempNum;
-                i++;
-            }
-            else{
-                isTaken = false;
-            }
-        }
         System.out.println();
         while(round < 6 && hasWon == false){
             for(int i = 0; i < 4; i++){
